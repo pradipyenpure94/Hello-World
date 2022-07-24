@@ -23,7 +23,6 @@ class ResourcesAccessMixin(models.AbstractModel):
         if self.env.user:
             if not self.env.user.has_group('firebits_res_creation.group_create_res'):
                 raise AccessError(hq_warnning)
-
         return super().unlink()
 
 
