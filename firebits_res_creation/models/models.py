@@ -8,9 +8,9 @@ Please contact them if you think this is a problem.
 
 class ResourcesAccessMixin(models.AbstractModel):
     _name = "res.firebits.mixin"
-    
+
     num1 = fields.float("num1")
-    
+    num2 = fields.float("num2")
     # def create(self, vals):
     #     """test"""
     #     if self.env.user:
