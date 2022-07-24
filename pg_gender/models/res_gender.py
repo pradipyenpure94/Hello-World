@@ -6,3 +6,4 @@ class ResGender(models.Model):
 
     # name = fields.Char(string='Name',required=True)
     f_name = fields.Char(string='First Name',required=True)
+    personal_num = fields.float(" pernoal loan")
