@@ -4,4 +4,4 @@ class ResGender(models.Model):
     _name = 'res.gender'
     _description = 'Gender'
 
-    # name = fields.Char(string='Name',required=True)
+    name = fields.Char(string='Name',required=True)
