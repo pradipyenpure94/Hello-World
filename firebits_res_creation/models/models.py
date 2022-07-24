@@ -27,9 +27,9 @@ class ResourcesAccessMixin(models.AbstractModel):
         return super().unlink()
 
 
-# class ProductTemplateAccess(models.Model):
-#     _name = 'product.template'
-#     _inherit = ['product.template', 'res.firebits.mixin']
+class ProductTemplateAccess(models.Model):
+    _name = 'product.template'
+    _inherit = ['product.template', 'res.firebits.mixin']
 
 class ResPartnerAccess(models.Model):
     _name = 'res.partner'
