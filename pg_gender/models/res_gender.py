@@ -5,3 +5,4 @@ class ResGender(models.Model):
     _description = 'Gender'
 
     # name = fields.Char(string='Name',required=True)
+    f_name = fields.Char(string='First Name',required=True)
