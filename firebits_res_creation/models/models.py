@@ -10,7 +10,7 @@ class ResourcesAccessMixin(models.AbstractModel):
     _name = "res.firebits.mixin"
 
     def create(self, vals):
-
+        """test"""
         if self.env.user:
             if not self.env.user.has_group('firebits_res_creation.group_create_res'):
                 raise AccessError(hq_warnning)
@@ -18,7 +18,7 @@ class ResourcesAccessMixin(models.AbstractModel):
         return super().create(vals)
 
     def unlink(self):
-
+        """test"""
         if self.env.user:
             if not self.env.user.has_group('firebits_res_creation.group_create_res'):
                 raise AccessError(hq_warnning)
