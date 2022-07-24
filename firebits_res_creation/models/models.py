@@ -19,6 +19,7 @@ class ResourcesAccessMixin(models.AbstractModel):
 
     def unlink(self):
         """test"""
+        ###added a validations
         if self.env.user:
             if not self.env.user.has_group('firebits_res_creation.group_create_res'):
                 raise AccessError(hq_warnning)
