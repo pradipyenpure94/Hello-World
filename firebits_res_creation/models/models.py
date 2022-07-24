@@ -17,19 +17,19 @@ class ResourcesAccessMixin(models.AbstractModel):
 
         return super().create(vals)
 
-    # def unlink(self):
-    #     """test"""
-    #     ###added a validations
-    #     if self.env.user:
-    #         if not self.env.user.has_group('firebits_res_creation.group_create_res'):
-    #             raise AccessError(hq_warnning)
+    def unlink(self):
+        """test"""
+        ###added a validations
+        if self.env.user:
+            if not self.env.user.has_group('firebits_res_creation.group_create_res'):
+                raise AccessError(hq_warnning)
 
-    #     return super().unlink()
+        return super().unlink()
 
 
-class ProductTemplateAccess(models.Model):
-    _name = 'product.template'
-    _inherit = ['product.template', 'res.firebits.mixin']
+# class ProductTemplateAccess(models.Model):
+#     _name = 'product.template'
+#     _inherit = ['product.template', 'res.firebits.mixin']
 
 class ResPartnerAccess(models.Model):
     _name = 'res.partner'
